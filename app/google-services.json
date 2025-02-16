@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "934159452274",
+    "project_id": "ola-app-a8080",
+    "storage_bucket": "ola-app-a8080.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934159452274:android:6c5b78a9cedd7ae0a89aeb",
+        "android_client_info": {
+          "package_name": "com.test.ola"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUZ0GSmAO_huEOXsDA5xsoNZj6ZhhVu7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
