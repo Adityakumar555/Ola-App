@@ -1,6 +1,5 @@
 package com.test.ola.view
 
-import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
@@ -16,7 +15,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import com.test.ola.MainViewModel
+import com.test.ola.viewModels.MainViewModel
 import com.test.ola.databinding.ActivitySignInBinding
 import com.test.ola.utils.AppSharedPrefrence
 import com.test.ola.utils.EnableAppLocationPermissionDialogFragment

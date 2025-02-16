@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.firestore.FirebaseFirestore
-import com.test.ola.MainViewModel
+import com.test.ola.viewModels.MainViewModel
 import com.test.ola.databinding.ActivityUserBinding
 import com.test.ola.models.Driver
 import com.test.ola.utils.AppSharedPrefrence

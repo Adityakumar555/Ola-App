@@ -1,4 +1,4 @@
-package com.test.ola
+package com.test.ola.viewModels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -44,9 +44,7 @@ class MainViewModel : ViewModel() {
             // Get new FCM registration token
             setCurrentDeviceToken.postValue(task.result)
             // token = task.result
-
         })
-
     }
 
     fun saveData(
@@ -104,7 +102,6 @@ class MainViewModel : ViewModel() {
             .update("latitude", latitude, "longitude", longitude)
     }
 
-
     fun getUser(collection: String, number: String) {
         firestore.collection(collection)
             .document(number)
@@ -142,7 +139,6 @@ class MainViewModel : ViewModel() {
         mobileNumber: String?,
         userName: String?
     ) {
-
         val nearDriver = hashMapOf(
             "name" to nearbyDriver.name,
             "number" to nearbyDriver.number,
@@ -153,7 +149,6 @@ class MainViewModel : ViewModel() {
             "to" to to,
             "rideRequestUserNumber" to mobileNumber,
             "rideRequestUserName" to userName,
-
             )
 
         firestore.collection("NearestDriver")
@@ -184,7 +179,6 @@ class MainViewModel : ViewModel() {
                     //   Toast.makeText(this@DriverActivity, "error", Toast.LENGTH_SHORT).show()
                 }
             })
-
     }
 
 
@@ -200,7 +194,6 @@ class MainViewModel : ViewModel() {
 
                 val rides = data?.toObjects(RideAccept::class.java)
                 setRides.postValue(rides)
-
             }
     }
 

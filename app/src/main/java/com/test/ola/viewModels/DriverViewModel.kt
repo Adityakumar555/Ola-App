@@ -1,4 +1,4 @@
-package com.test.ola
+package com.test.ola.viewModels
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -16,9 +16,7 @@ class DriverViewModel : ViewModel() {
     private val isRideAccept = MutableLiveData<Boolean>()
     val rideAccept:LiveData<Boolean> = isRideAccept
 
-
     fun deleteRequest(driverNumber: String?, rideRequestUserNumber: String?) {
-
         firestore.collection("NearestDriver")
             .whereEqualTo("number", driverNumber)
             .whereEqualTo("rideRequestUserNumber", rideRequestUserNumber)
@@ -77,7 +75,6 @@ class DriverViewModel : ViewModel() {
     }
 
     fun deleteAllRideToRideRequestUserNumber(mobileNumber: String?, rideRequestUserNumber: String?) {
-
         firestore.collection("NearestDriver")
             .whereEqualTo("rideRequestUserNumber",rideRequestUserNumber)
             .get()

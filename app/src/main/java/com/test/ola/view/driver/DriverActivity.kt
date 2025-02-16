@@ -7,7 +7,6 @@ import android.location.Location
 import android.os.Bundle
 import android.os.StrictMode
 import android.view.View
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.IntentSenderRequest
@@ -20,21 +19,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.firestore.FirebaseFirestore
-import com.test.ola.DriverViewModel
-import com.test.ola.MainViewModel
+import com.test.ola.viewModels.DriverViewModel
+import com.test.ola.viewModels.MainViewModel
 import com.test.ola.databinding.ActivityDriverBinding
-import com.test.ola.fcmNotification.models.Notification
-import com.test.ola.fcmNotification.models.NotificationData
-import com.test.ola.fcmNotification.retrofit.RetrofitInstance
 import com.test.ola.utils.AppSharedPrefrence
 import com.test.ola.utils.EnableAppLocationPermissionDialogFragment
 import com.test.ola.utils.MyHelper
 import com.test.ola.view.UserProfileDetailsActivity
 import com.test.ola.view.driver.adapter.ShowAllRidesAdapter
 import com.test.ola.view.driver.interfaces.DriverRideClickListener
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class DriverActivity : AppCompatActivity(),DriverRideClickListener {
 

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.firestore.FirebaseFirestore
-import com.test.ola.MainViewModel
+import com.test.ola.viewModels.MainViewModel
 import com.test.ola.databinding.ActivityUserProfileDetailsBinding
 import com.test.ola.utils.AppSharedPrefrence
 
