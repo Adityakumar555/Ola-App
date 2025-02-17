@@ -210,7 +210,6 @@ class DriverActivity : AppCompatActivity(),DriverRideClickListener {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == 10 && grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             updateCurrentLocation()
-
         } else {
             if (shouldShowRequestPermissionRationale(permissions[0])) {
                 val progressDialog = EnableAppLocationPermissionDialogFragment()

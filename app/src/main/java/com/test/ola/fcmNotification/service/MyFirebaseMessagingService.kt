@@ -5,6 +5,7 @@ import android.Manifest
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
@@ -14,8 +15,8 @@ import com.test.ola.R
 
 class MyFirebaseMessagingService:FirebaseMessagingService() {
 
-    private val channelID = "fcm_notification"
-    private val channelName = "fcmApp"
+    private val channelID = "ola_app_notification"
+    private val channelName = "olaApp"
 
 
     private val notificationManager: NotificationManager by lazy {
@@ -30,13 +31,13 @@ class MyFirebaseMessagingService:FirebaseMessagingService() {
             NotificationManager.IMPORTANCE_HIGH,
         )
 
+
         val notification = NotificationCompat.Builder(this, channelID)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setColor(getColor(R.color.black))
             .setContentTitle(message.data["title"])
             .setContentText(message.data["body"])
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setAutoCancel(true)
             .build()
 
 
@@ -58,9 +59,6 @@ class MyFirebaseMessagingService:FirebaseMessagingService() {
         notificationManager.createNotificationChannel(channel)
 
         notificationManager.notify(System.currentTimeMillis().toInt(), notification)
-
-        //NotificationManagerCompat.from(this).notify(System.currentTimeMillis().toInt(), notification)
-
 
 
     }
